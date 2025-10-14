@@ -1,4 +1,5 @@
-import { MessageCircle, Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
+import whatsappLogo from "@/assets/whatsapp-logo.svg";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -11,24 +12,24 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-primary via-primary/90 to-secondary text-white py-12">
+    <footer className="bg-secondary text-secondary-foreground py-12 border-t-4 border-primary">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Distribuciones AMS de la Costa</h3>
-            <p className="text-white/80 mb-4">El aliado que buscas</p>
-            <p className="text-white/70 text-sm">
+            <h3 className="text-2xl font-bold mb-4 text-primary">Distribuciones AMS de la Costa</h3>
+            <p className="text-secondary-foreground/90 mb-4 font-medium">El aliado que buscas</p>
+            <p className="text-secondary-foreground/70 text-sm">
               5 años distribuyendo calidad en la costa caribeña
             </p>
           </div>
           
           <div>
-            <h4 className="text-xl font-bold mb-4">Enlaces Rápidos</h4>
+            <h4 className="text-xl font-bold mb-4 text-primary">Enlaces Rápidos</h4>
             <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => scrollToSection('home')}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Inicio
                 </button>
@@ -36,7 +37,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('products')}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Productos
                 </button>
@@ -44,7 +45,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('about')}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Sobre Nosotros
                 </button>
@@ -52,7 +53,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('benefits')}
-                  className="text-white/80 hover:text-white transition-colors"
+                  className="text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   Contacto
                 </button>
@@ -61,16 +62,16 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-xl font-bold mb-4">Contacto</h4>
+            <h4 className="text-xl font-bold mb-4 text-primary">Contacto</h4>
             <ul className="space-y-3">
               <li>
                 <a 
                   href="https://wa.me/573205971329"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4" />
                   +57 320 597 1329
                 </a>
               </li>
@@ -79,7 +80,7 @@ const Footer = () => {
                   href="https://wa.me/573005994913"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
                   +57 300 599 4913
@@ -88,13 +89,13 @@ const Footer = () => {
               <li>
                 <a 
                   href="mailto:distribucionesamsdelacosta@gmail.com"
-                  className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4" />
                   distribucionesamsdelacosta@gmail.com
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-white/80">
+              <li className="flex items-start gap-2 text-secondary-foreground/80">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                 <span>Calle 39 No. 23b - 26, Barrio Montes, Barranquilla</span>
               </li>
@@ -105,23 +106,23 @@ const Footer = () => {
                 href="https://www.instagram.com/distribucionesams"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5 text-secondary" />
               </a>
               <a
                 href="https://www.facebook.com/distribucionesamsdelacosta"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors"
+                className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5 text-secondary" />
               </a>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-white/20 pt-8 text-center text-white/70 text-sm">
+        <div className="border-t border-primary pt-8 text-center text-secondary-foreground/70 text-sm">
           <p>© 2025 Distribuciones AMS de la Costa. Todos los derechos reservados.</p>
         </div>
       </div>

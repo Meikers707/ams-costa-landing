@@ -9,45 +9,45 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 160 84% 39%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 45 93% 47%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 217 91% 60%;
+    --secondary: 0 0% 0%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 160 84% 39%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 93% 47%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Category colors */
-    --category-disposables: 160 84% 39%;
-    --category-bags: 217 91% 60%;
-    --category-cleaning: 271 76% 53%;
-    --category-food: 25 95% 53%;
-    --category-beverages: 188 86% 53%;
+    --category-disposables: 45 93% 47%;
+    --category-bags: 0 0% 0%;
+    --category-cleaning: 0 0% 30%;
+    --category-food: 45 93% 47%;
+    --category-beverages: 0 0% 0%;
 
     /* Gradient stops */
-    --gradient-from: 160 84% 39%;
-    --gradient-to: 217 91% 60%;
+    --gradient-from: 45 93% 47%;
+    --gradient-to: 0 0% 0%;
 
     /* WhatsApp brand color */
     --whatsapp: 142 70% 49%;

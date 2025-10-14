@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button";
 
 const AboutUs = () => {
   return (
-    <section id="about" className="py-20 bg-accent">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Conoce Distribuciones AMS
         </h2>
+        <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
@@ -21,11 +22,11 @@ const AboutUs = () => {
               </p>
             </div>
             
-            <Card className="border-none shadow-lg">
+            <Card className="border border-border shadow-sm">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Target className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <Target className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2 text-foreground">Misión</h4>
@@ -38,11 +39,11 @@ const AboutUs = () => {
               </CardContent>
             </Card>
             
-            <Card className="border-none shadow-lg">
+            <Card className="border border-border shadow-sm">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Eye className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <Eye className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2 text-foreground">Visión</h4>
@@ -57,11 +58,11 @@ const AboutUs = () => {
           </div>
           
           <div>
-            <Card className="border-none shadow-lg h-full">
+            <Card className="border border-border shadow-sm h-full">
               <CardContent className="p-8">
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-2 text-foreground">Ubicación</h4>
@@ -82,7 +83,7 @@ const AboutUs = () => {
                   <div className="pt-4">
                     <Button
                       onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Calle+39+No.+23b+-+26,+Barrio+Montes,+Barranquilla', '_blank')}
-                      className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-white"
+                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
                     >
                       <MapPin className="mr-2 h-4 w-4" />
                       Cómo llegar
