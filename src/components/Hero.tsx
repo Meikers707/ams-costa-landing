@@ -1,9 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-secondary">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-secondary">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)]" />
       
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
@@ -16,11 +14,7 @@ const Hero = () => {
           de marcas reconocidas como Coca-Cola y Postobón en Barranquilla
         </p>
         
-        <Button
-          size="lg"
-          onClick={() => window.open('https://wa.me/573205971329', '_blank')}
-          className="bg-whatsapp hover:bg-whatsapp/90 text-white text-lg px-8 py-6 h-auto rounded-full shadow-2xl hover:scale-105 transition-all duration-300"
-        >
+        <Button size="lg" onClick={() => window.open('https://wa.me/573205971329', '_blank')} className="bg-whatsapp hover:bg-whatsapp/90 text-white px-8 py-6 h-auto rounded-full shadow-2xl hover:scale-105 transition-all duration-300 text-base">
           <MessageCircle className="mr-2 h-6 w-6" />
           Consultar por WhatsApp
         </Button>
@@ -36,8 +30,6 @@ const Hero = () => {
           <div className="w-1.5 h-1.5 bg-white rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
