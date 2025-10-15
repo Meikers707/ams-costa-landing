@@ -106,7 +106,7 @@ const ProductCatalog = () => {
     const message = encodeURIComponent(
       `Hola! Me interesa el producto: ${product.name} - Ref: ${product.reference}. ¿Podrían darme más información sobre disponibilidad y precio?`
     );
-    window.open(`https://wa.me/573205971329?text=${message}`, '_blank');
+    window.open(`https://wa.me/5733054679063?text=${message}`, '_blank');
   };
 
   const handleKeyDown = (e: React.KeyboardEvent, product: Product) => {

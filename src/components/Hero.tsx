@@ -18,7 +18,7 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <Button size="lg" onClick={() => window.open('https://wa.me/573205971329', '_blank')} className="bg-whatsapp hover:bg-whatsapp/90 text-white px-8 py-6 h-auto rounded-md shadow-lg hover:shadow-xl transition-all duration-300 text-base font-semibold">
+          <Button size="lg" onClick={() => window.open('https://wa.me/5733054679063', '_blank')} className="bg-whatsapp hover:bg-whatsapp/90 text-white px-8 py-6 h-auto rounded-md shadow-lg hover:shadow-xl transition-all duration-300 text-base font-semibold">
             <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-2 h-6 w-6" />
             Consultar por WhatsApp
           </Button>

@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <Button 
               size="sm"
-              onClick={() => window.open('https://wa.me/573205971329', '_blank')}
+              onClick={() => window.open('https://wa.me/5733054679063', '_blank')}
               className="bg-whatsapp hover:bg-whatsapp/90 text-white"
             >
               <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-1.5 h-4 w-4" />
@@ -98,7 +98,7 @@ const Navbar = () => {
                 ))}
                 <Button 
                   className="bg-whatsapp hover:bg-whatsapp/90 text-white mt-4"
-                  onClick={() => window.open('https://wa.me/573205971329', '_blank')}
+                  onClick={() => window.open('https://wa.me/5733054679063', '_blank')}
                 >
                   <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-2 h-5 w-5" />
                   Contactar por WhatsApp

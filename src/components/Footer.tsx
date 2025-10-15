@@ -66,13 +66,13 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://wa.me/573205971329"
+                  href="https://wa.me/5733054679063"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   <img src={whatsappLogoWhite} alt="WhatsApp" className="w-4 h-4 brightness-0 invert-0" />
-                  +57 320 597 1329
+                  +57 330 546 7906
                 </a>
               </li>
               <li>
