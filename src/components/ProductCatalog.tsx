@@ -198,19 +198,7 @@ const ProductCatalog = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Nuestros Productos Destacados
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
-        
-        <div className="flex justify-center mb-12">
-          <a
-            href="https://drive.google.com/file/d/1LCUo_2o65hI-BUk_TSJvDnyGd8K_ySzG/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-secondary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            <FileText className="w-6 h-6" />
-            Ver Catálogo Completo
-          </a>
-        </div>
+        <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product, index) => (
@@ -278,6 +266,20 @@ const ProductCatalog = () => {
               </Card>
             </a>
           ))}
+        </div>
+        
+        <div className="flex justify-center mt-16 animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <a
+            href="https://drive.google.com/file/d/1LCUo_2o65hI-BUk_TSJvDnyGd8K_ySzG/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-secondary px-10 py-5 rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110 hover:-translate-y-1 overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            <FileText className="w-7 h-7 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
+            <span className="relative z-10">Ver Catálogo Completo</span>
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-secondary rounded-full animate-pulse"></span>
+          </a>
         </div>
       </div>
     </section>
