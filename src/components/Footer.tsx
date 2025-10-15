@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
-import whatsappLogo from "@/assets/whatsapp-logo.svg";
+import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-secondary text-secondary-foreground py-12 border-t-4 border-primary">
+    <footer id="contact" className="bg-secondary text-secondary-foreground py-12 border-t-4 border-primary">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <div>
@@ -71,7 +71,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  <img src={whatsappLogo} alt="WhatsApp" className="w-4 h-4" />
+                  <img src={whatsappLogoWhite} alt="WhatsApp" className="w-4 h-4 brightness-0 invert-0" />
                   +57 320 597 1329
                 </a>
               </li>

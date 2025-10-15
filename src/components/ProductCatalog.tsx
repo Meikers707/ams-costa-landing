@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import whatsappLogo from "@/assets/whatsapp-logo.svg";
+import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
 
 interface Product {
   name: string;
@@ -172,7 +172,7 @@ const ProductCatalog = () => {
                 {/* CTA Button */}
                 <div className="mt-auto">
                   <div className="w-full px-4 py-2.5 rounded-lg bg-whatsapp text-white font-semibold text-sm transition-colors duration-200 group-hover:bg-whatsapp/90 flex items-center justify-center gap-2">
-                    <img src={whatsappLogo} alt="WhatsApp" className="h-4 w-4" />
+                    <img src={whatsappLogoWhite} alt="WhatsApp" className="h-4 w-4" />
                     Consultar disponibilidad
                   </div>
                 </div>

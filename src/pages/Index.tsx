@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import ProductCatalog from "@/components/ProductCatalog";
@@ -7,8 +8,11 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
-    <div id="home" className="min-h-screen">
-      <Hero />
+    <div className="min-h-screen">
+      <Navbar />
+      <div id="home">
+        <Hero />
+      </div>
       <Benefits />
       <ProductCatalog />
       <AboutUs />
