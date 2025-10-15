@@ -10,6 +10,12 @@ import vasoPlasticoTami from "@/assets/products/vaso-plastico-tami.png";
 import vasoPlasticoWau from "@/assets/products/vaso-plastico-wau.png";
 import bandejaEspumada from "@/assets/products/bandeja-espumada.png";
 import bowlBamboo from "@/assets/products/bowl-bamboo.png";
+import contenedorDobleUso from "@/assets/products/contenedor-doble-uso.png";
+import cucharaSopera from "@/assets/products/cuchara-sopera.png";
+import cuchillo from "@/assets/products/cuchillo.png";
+import tapaCristal from "@/assets/products/tapa-cristal.png";
+import tapaSalsero from "@/assets/products/tapa-salsero.png";
+import tenedor from "@/assets/products/tenedor.png";
 
 interface Product {
   name: string;
@@ -113,25 +119,64 @@ const products: Product[] = [
     image: vasoPlasticoWau,
   },
   {
-    name: "Bolsa de Basura Jumbo",
-    category: "Bolsas",
+    name: "Contenedor Doble Uso",
+    category: "Desechables",
     color: "Negro",
     colorHex: "#000000",
-    reference: "Jumbo Negro",
-    info: "60x70cm, alta resistencia",
+    reference: "CDU-Negro",
+    info: "Contenedor versátil con tapa incluida, ideal para ensaladas y bowls",
+    image: contenedorDobleUso,
   },
   {
-    name: "Bolsa de Papel Kraft #5",
-    category: "Bolsas",
-    color: "Natural",
-    colorHex: "#D4A574",
-    reference: "5",
-    info: "13.3x8.8x28.0cm, eco-amigable",
+    name: "Tapa Cristal",
+    category: "Desechables",
+    color: "Transparente",
+    colorHex: "#FFFFFF",
+    reference: "TC",
+    info: "Tapa cristalina transparente, compatible con múltiples contenedores",
+    image: tapaCristal,
+  },
+  {
+    name: "Tapa Salsero",
+    category: "Desechables",
+    color: "Transparente",
+    colorHex: "#FFFFFF",
+    reference: "TS",
+    info: "Tapa para salseros y contenedores pequeños, cierre hermético",
+    image: tapaSalsero,
+  },
+  {
+    name: "Cuchara Sopera",
+    category: "Cubiertos",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "CS",
+    info: "Cuchara desechable resistente, ideal para sopas y postres",
+    image: cucharaSopera,
+  },
+  {
+    name: "Tenedor",
+    category: "Cubiertos",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "TN",
+    info: "Tenedor desechable resistente, perfecto para todo tipo de comidas",
+    image: tenedor,
+  },
+  {
+    name: "Cuchillo",
+    category: "Cubiertos",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "CU",
+    info: "Cuchillo desechable con filo dentado, corte eficiente",
+    image: cuchillo,
   },
 ];
 
 const categoryColors: Record<string, string> = {
   'Desechables': 'bg-primary/10 text-primary border-primary/20',
+  'Cubiertos': 'bg-accent/10 text-foreground border-accent/20',
   'Bolsas': 'bg-secondary/10 text-white border-secondary/20',
   'Insumos de Aseo': 'bg-purple-100 text-purple-700 border-purple-200',
   'Alimentos': 'bg-orange-100 text-orange-700 border-orange-200',
