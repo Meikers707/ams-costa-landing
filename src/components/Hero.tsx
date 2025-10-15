@@ -1,10 +1,18 @@
 import { Button } from "@/components/ui/button";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
+import heroVideo from "@/assets/videos/hero-background.mp4";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
-      <div className="absolute inset-0 bg-secondary">
-        <div className="absolute inset-0 opacity-[0.15] bg-[radial-gradient(hsl(var(--primary))_1px,transparent_1px)] bg-[size:24px_24px]" />
-      </div>
+      <video 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-secondary/60" />
       
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight tracking-tight">AMS el aliado que buscas</h1>
