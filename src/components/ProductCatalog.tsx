@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import whatsappLogo from "@/assets/whatsapp-logo.svg";
 
 interface Product {
@@ -94,12 +93,27 @@ const products: Product[] = [
   },
 ];
 
+const categoryColors: Record<string, string> = {
+  'Desechables': 'bg-primary/10 text-primary border-primary/20',
+  'Bolsas': 'bg-secondary/10 text-white border-secondary/20',
+  'Insumos de Aseo': 'bg-purple-100 text-purple-700 border-purple-200',
+  'Alimentos': 'bg-orange-100 text-orange-700 border-orange-200',
+  'Bebidas': 'bg-cyan-100 text-cyan-700 border-cyan-200',
+};
+
 const ProductCatalog = () => {
   const handleWhatsAppClick = (product: Product) => {
     const message = encodeURIComponent(
       `Hola! Me interesa el producto: ${product.name} - Ref: ${product.reference}. ¿Podrían darme más información sobre disponibilidad y precio?`
     );
     window.open(`https://wa.me/573205971329?text=${message}`, '_blank');
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, product: Product) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleWhatsAppClick(product);
+    }
   };
 
   return (
@@ -110,38 +124,58 @@ const ProductCatalog = () => {
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product, index) => (
             <Card 
               key={index}
-              className="border border-border bg-card hover:shadow-md transition-all duration-300 overflow-hidden animate-fade-in"
-              style={{ animationDelay: `${index * 50}ms` }}
+              role="button"
+              tabIndex={0}
+              aria-label={`Consultar disponibilidad de ${product.name}`}
+              onClick={() => handleWhatsAppClick(product)}
+              onKeyDown={(e) => handleKeyDown(e, product)}
+              className="group cursor-pointer border-2 border-border bg-card rounded-xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 animate-fade-in"
+              style={{ animationDelay: `${index * 80}ms` }}
             >
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-4">
+              {/* Visual Area with aspect ratio */}
+              <div className="relative aspect-[4/3] bg-muted">
+                {/* Category Badge */}
+                <span className={`absolute top-3 right-3 z-10 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm ${categoryColors[product.category] || 'bg-muted/50 text-foreground border-border'}`}>
+                  {product.category}
+                </span>
+                
+                {/* Color Circle */}
+                <div className="absolute inset-0 flex items-center justify-center">
                   <div 
-                    className="w-16 h-16 rounded-full flex-shrink-0 border-2 border-border"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
                     style={{ backgroundColor: product.colorHex }}
                   />
-                  <span className="text-xs text-muted-foreground font-medium">{product.category}</span>
+                </div>
+              </div>
+              
+              {/* Content Area */}
+              <CardContent className="p-4 sm:p-5 flex flex-col min-h-[220px]">
+                {/* Product Header */}
+                <div className="mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 line-clamp-2">
+                    {product.name}
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-normal">
+                    Ref: {product.reference}
+                  </p>
                 </div>
                 
-                <h3 className="text-lg font-bold mb-1 text-foreground">{product.name}</h3>
+                {/* Product Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2 flex-grow">
+                  {product.info}
+                </p>
                 
-                <div className="mb-2">
-                  <span className="text-xs text-muted-foreground">Ref: {product.reference}</span>
+                {/* CTA Button */}
+                <div className="mt-auto">
+                  <div className="w-full px-4 py-2.5 rounded-lg bg-whatsapp text-white font-semibold text-sm transition-colors duration-200 group-hover:bg-whatsapp/90 flex items-center justify-center gap-2">
+                    <img src={whatsappLogo} alt="WhatsApp" className="h-4 w-4" />
+                    Consultar disponibilidad
+                  </div>
                 </div>
-                
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{product.info}</p>
-                
-                <Button
-                  onClick={() => handleWhatsAppClick(product)}
-                  className="w-full bg-whatsapp hover:bg-whatsapp/90 text-white rounded-md"
-                  size="sm"
-                >
-                  <img src={whatsappLogo} alt="WhatsApp" className="mr-2 h-4 w-4" />
-                  Consultar disponibilidad
-                </Button>
               </CardContent>
             </Card>
           ))}
