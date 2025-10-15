@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
+import amsLogo from "@/assets/ams-logo.png";
 
 const navLinks = [
   { name: "Inicio", href: "#home" },
@@ -46,9 +47,10 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <button 
               onClick={() => scrollToSection("#home")}
-              className="text-xl font-bold text-foreground hover:text-primary transition-colors"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Ir al inicio"
             >
-              Distribuciones <span className="text-primary">AMS</span>
+              <img src={amsLogo} alt="AMS Distribuciones" className="h-12 w-auto" />
             </button>
           </div>
 
