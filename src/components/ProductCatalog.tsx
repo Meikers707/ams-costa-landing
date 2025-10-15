@@ -8,6 +8,8 @@ import portacomidaP3 from "@/assets/products/portacomida-p3.png";
 import vasoEspumado from "@/assets/products/vaso-espumado.png";
 import vasoPlasticoTami from "@/assets/products/vaso-plastico-tami.png";
 import vasoPlasticoWau from "@/assets/products/vaso-plastico-wau.png";
+import bandejaEspumada from "@/assets/products/bandeja-espumada.png";
+import bowlBamboo from "@/assets/products/bowl-bamboo.png";
 
 interface Product {
   name: string;
@@ -64,6 +66,24 @@ const products: Product[] = [
     reference: "J2",
     info: "Con 2 compartimientos, ideal para plato principal y acompañamiento",
     image: portacomidaJ2,
+  },
+  {
+    name: "Bandeja Espumada",
+    category: "Desechables",
+    color: "Negro",
+    colorHex: "#000000",
+    reference: "BE-1.3",
+    info: "Bandeja espumada altura 1.3cm, perfecta para exhibición de alimentos",
+    image: bandejaEspumada,
+  },
+  {
+    name: "Bowl Bamboo Natural",
+    category: "Desechables",
+    color: "Natural",
+    colorHex: "#D4A574",
+    reference: "BB-Natural",
+    info: "Bowl de bambú biodegradable, eco-amigable y elegante",
+    image: bowlBamboo,
   },
   {
     name: "Vaso Espumado 16oz",
