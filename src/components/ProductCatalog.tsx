@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { FileText } from "lucide-react";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
 import portacomidaC1 from "@/assets/products/portacomida-c1.png";
 import portacomidaJ1 from "@/assets/products/portacomida-j1.png";
@@ -197,7 +198,19 @@ const ProductCatalog = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Nuestros Productos Destacados
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
+        <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
+        
+        <div className="flex justify-center mb-12">
+          <a
+            href="https://drive.google.com/file/d/1LCUo_2o65hI-BUk_TSJvDnyGd8K_ySzG/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-secondary px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+          >
+            <FileText className="w-6 h-6" />
+            Ver Catálogo Completo
+          </a>
+        </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {products.map((product, index) => (

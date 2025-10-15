@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
+import amsLogo from "@/assets/ams-logo.png";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -16,7 +17,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-primary">Distribuciones AMS de la Costa</h3>
+            <img src={amsLogo} alt="AMS Distribuciones" className="h-16 w-auto mb-4" />
             <p className="text-secondary-foreground/90 mb-4 font-medium">El aliado que buscas</p>
             <p className="text-secondary-foreground/70 text-sm">
               5 años distribuyendo calidad en la costa caribeña
@@ -71,7 +72,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  <img src={whatsappLogoWhite} alt="WhatsApp" className="w-4 h-4 brightness-0 invert-0" />
+                  <img src={whatsappLogoWhite} alt="WhatsApp" className="w-4 h-4" />
                   +57 330 546 7906
                 </a>
               </li>
