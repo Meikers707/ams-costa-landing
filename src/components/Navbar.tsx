@@ -42,7 +42,7 @@ const Navbar = () => {
       ${isScrolled ? "shadow-md" : ""}
     `}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20 md:h-24">
           
           <div className="flex-shrink-0">
             <button 
@@ -50,7 +50,7 @@ const Navbar = () => {
               className="hover:opacity-80 transition-opacity"
               aria-label="Ir al inicio"
             >
-              <img src={amsLogo} alt="AMS Distribuciones" className="h-12 w-auto" />
+              <img src={amsLogo} alt="AMS Distribuciones" className="h-16 md:h-20 w-auto" />
             </button>
           </div>
 
