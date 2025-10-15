@@ -1,5 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
+import portacomidaC1 from "@/assets/products/portacomida-c1.png";
+import portacomidaJ1 from "@/assets/products/portacomida-j1.png";
+import portacomidaJ1Negro from "@/assets/products/portacomida-j1-negro.png";
+import portacomidaJ2 from "@/assets/products/portacomida-j2.png";
+import portacomidaP3 from "@/assets/products/portacomida-p3.png";
+import vasoEspumado from "@/assets/products/vaso-espumado.png";
+import vasoPlasticoTami from "@/assets/products/vaso-plastico-tami.png";
+import vasoPlasticoWau from "@/assets/products/vaso-plastico-wau.png";
 
 interface Product {
   name: string;
@@ -8,6 +16,7 @@ interface Product {
   colorHex: string;
   reference: string;
   info: string;
+  image?: string;
 }
 
 const products: Product[] = [
@@ -17,7 +26,44 @@ const products: Product[] = [
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "P3",
-    info: "Espumado, ideal para comidas calientes",
+    info: "Espumado con 3 compartimientos, ideal para comidas completas",
+    image: portacomidaP3,
+  },
+  {
+    name: "Portacomida C1",
+    category: "Desechables",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "C1",
+    info: "Compacto, perfecto para hamburguesas y sándwiches",
+    image: portacomidaC1,
+  },
+  {
+    name: "Portacomida J1",
+    category: "Desechables",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "J1 Blanco",
+    info: "Rectangular, versátil para todo tipo de comidas",
+    image: portacomidaJ1,
+  },
+  {
+    name: "Portacomida J1 Negro",
+    category: "Desechables",
+    color: "Negro",
+    colorHex: "#000000",
+    reference: "J1 Negro",
+    info: "Elegante presentación en color negro, ideal para eventos",
+    image: portacomidaJ1Negro,
+  },
+  {
+    name: "Portacomida J2",
+    category: "Desechables",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "J2",
+    info: "Con 2 compartimientos, ideal para plato principal y acompañamiento",
+    image: portacomidaJ2,
   },
   {
     name: "Vaso Espumado 16oz",
@@ -25,7 +71,26 @@ const products: Product[] = [
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "16oz",
-    info: "Resistente, mantiene temperatura",
+    info: "Resistente, mantiene la temperatura de bebidas frías y calientes",
+    image: vasoEspumado,
+  },
+  {
+    name: "Vaso Plástico Tami",
+    category: "Desechables",
+    color: "Transparente",
+    colorHex: "#FFFFFF",
+    reference: "Tami",
+    info: "Económico y resistente, ideal para bebidas frías",
+    image: vasoPlasticoTami,
+  },
+  {
+    name: "Vaso Plástico Wau",
+    category: "Desechables",
+    color: "Transparente",
+    colorHex: "#87CEEB",
+    reference: "Wau",
+    info: "Cristalino, excelente presentación para eventos",
+    image: vasoPlasticoWau,
   },
   {
     name: "Bolsa de Basura Jumbo",
@@ -42,54 +107,6 @@ const products: Product[] = [
     colorHex: "#D4A574",
     reference: "5",
     info: "13.3x8.8x28.0cm, eco-amigable",
-  },
-  {
-    name: "Tapabocas Desechables",
-    category: "Insumos de Aseo",
-    color: "Azul",
-    colorHex: "#4A90E2",
-    reference: "Paquete x 50",
-    info: "Tricapa, alta protección",
-  },
-  {
-    name: "Coca Cola PET",
-    category: "Bebidas",
-    color: "Rojo",
-    colorHex: "#F40009",
-    reference: "600ml",
-    info: "Producto Coca-Cola Company",
-  },
-  {
-    name: "Agua Brisa",
-    category: "Bebidas",
-    color: "Azul Claro",
-    colorHex: "#87CEEB",
-    reference: "600ml",
-    info: "Agua purificada Postobón",
-  },
-  {
-    name: "Detergente Neutro Multiusos",
-    category: "Insumos de Aseo",
-    color: "Blanco",
-    colorHex: "#FFFFFF",
-    reference: "Galón 4L",
-    info: "Limpieza profunda",
-  },
-  {
-    name: "Arroz Premium",
-    category: "Alimentos",
-    color: "Blanco",
-    colorHex: "#FFFFFF",
-    reference: "Bulto 45kg",
-    info: "Marca Milena, primera calidad",
-  },
-  {
-    name: "Papel Higiénico Jumbo",
-    category: "Insumos de Aseo",
-    color: "Blanco",
-    colorHex: "#FFFFFF",
-    reference: "Rollo x 250mts",
-    info: "Alto rendimiento",
   },
 ];
 
@@ -132,18 +149,26 @@ const ProductCatalog = () => {
                 style={{ animationDelay: `${index * 80}ms` }}
               >
                 {/* Visual Area with aspect ratio */}
-                <div className="relative aspect-[4/3] bg-muted">
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-muted/50">
                   {/* Category Badge */}
                   <span className={`absolute top-3 right-3 z-10 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm ${categoryColors[product.category] || 'bg-muted/50 text-foreground border-border'}`}>
                     {product.category}
                   </span>
                   
-                  {/* Color Circle */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div 
-                      className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
-                      style={{ backgroundColor: product.colorHex }}
-                    />
+                  {/* Product Image or Color Circle */}
+                  <div className="absolute inset-0 flex items-center justify-center p-6">
+                    {product.image ? (
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                      />
+                    ) : (
+                      <div 
+                        className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
+                        style={{ backgroundColor: product.colorHex }}
+                      />
+                    )}
                   </div>
                 </div>
                 
