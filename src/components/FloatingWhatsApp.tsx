@@ -11,7 +11,7 @@ const FloatingWhatsApp = () => {
     >
       <Button
         size="lg"
-        className="bg-whatsapp hover:bg-whatsapp/90 text-white rounded-full w-16 h-16 shadow-2xl hover:scale-110 transition-all duration-300 animate-pulse-soft"
+        className="bg-whatsapp hover:bg-whatsapp/90 text-white rounded-full w-16 h-16 shadow-2xl hover:scale-110 transition-all duration-300"
       >
         <img src={whatsappLogoWhite} alt="WhatsApp" className="w-8 h-8" />
       </Button>
