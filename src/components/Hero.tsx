@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
-
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
       <div className="absolute inset-0 bg-secondary">
@@ -8,9 +7,7 @@ const Hero = () => {
       </div>
       
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight tracking-tight">
-          El aliado que buscas
-        </h1>
+        <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight tracking-tight">AMS el aliado que buscas</h1>
         
         <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
           Distribuidores de productos desechables, bolsas, insumos de aseo, alimentos y bebidas 
