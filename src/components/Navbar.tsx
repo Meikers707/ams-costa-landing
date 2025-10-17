@@ -76,7 +76,7 @@ const Navbar = () => {
               asChild
               className="bg-whatsapp hover:bg-whatsapp/90 text-white"
             >
-              <a href="https://wa.me/5733054679063" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/573015813455" target="_blank" rel="noopener noreferrer">
                 <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-1.5 h-4 w-4" />
                 Contactar
               </a>
@@ -104,7 +104,7 @@ const Navbar = () => {
                   className="bg-whatsapp hover:bg-whatsapp/90 text-white mt-4"
                   asChild
                 >
-                  <a href="https://wa.me/5733054679063" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/573015813455" target="_blank" rel="noopener noreferrer">
                     <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-2 h-5 w-5" />
                     Contactar por WhatsApp
                   </a>
