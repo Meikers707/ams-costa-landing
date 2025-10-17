@@ -3,13 +3,7 @@ import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
 import heroVideo from "@/assets/videos/hero-background.mp4";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-secondary">
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
+      <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
         <source src={heroVideo} type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-secondary/60" />
@@ -17,10 +11,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10 text-center animate-fade-in">
         <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight tracking-tight">AMS el aliado que buscas</h1>
         
-        <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
-          Distribuidores de productos desechables, bolsas, insumos de aseo, alimentos y bebidas 
-          de marcas reconocidas como Coca-Cola y Postobón en Barranquilla
-        </p>
+        <p className="text-xl md:text-2xl text-secondary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed font-light">Distribuidores de productos desechables, bolsas, insumos de aseo, alimentos y bebidas por más de 5 años en Barranquilla</p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
           <Button size="lg" asChild className="bg-whatsapp hover:bg-whatsapp/90 text-white px-8 py-3 h-auto rounded-md shadow-lg hover:shadow-xl transition-all duration-300 text-base font-semibold">
