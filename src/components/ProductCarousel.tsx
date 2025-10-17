@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import Autoplay from "embla-carousel-autoplay";
 import portacomidaP3 from "@/assets/products/portacomida-p3.png";
 import portacomidaC1 from "@/assets/products/portacomida-c1.png";
 import portacomidaJ1 from "@/assets/products/portacomida-j1.png";
@@ -77,6 +78,11 @@ const ProductCarousel = () => {
             align: "start",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
           className="w-full"
         >
           <CarouselContent className="-ml-2 md:-ml-4">
