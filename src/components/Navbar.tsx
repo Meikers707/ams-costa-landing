@@ -50,7 +50,7 @@ const Navbar = () => {
               className="hover:opacity-80 transition-opacity"
               aria-label="Ir al inicio"
             >
-              <img src={amsLogo} alt="AMS Distribuciones" className="h-16 md:h-20 w-auto" />
+              <img src={amsLogo} alt="AMS Distribuciones" className="h-20 md:h-24 w-auto" />
             </button>
           </div>
 
