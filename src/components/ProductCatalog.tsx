@@ -319,7 +319,8 @@ const ProductCatalog = () => {
                     </span>
                     
                     {/* Product Image or Color Circle */}
-                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                    <div className="absolute inset-0 flex items-center justify-center p-6"
+                      style={{backgroundColor: "#fbdea8ff"}}>
                       {product.image ? (
                         <img 
                           src={product.image} 
