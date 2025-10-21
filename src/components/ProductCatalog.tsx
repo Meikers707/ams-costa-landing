@@ -189,7 +189,7 @@ const ProductCatalog = () => {
     const message = encodeURIComponent(
       `Hola! Me interesa el producto: ${product.name} - Ref: ${product.reference}. ¿Podrían darme más información sobre disponibilidad y precio?`
     );
-    return `https://wa.me/573015813455?text=${message}`;
+    return `https://wa.me/573205971329?text=${message}`;
   };
 
   return (

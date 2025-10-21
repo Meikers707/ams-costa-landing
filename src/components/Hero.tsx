@@ -21,7 +21,7 @@ const Hero = () => {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
           <Button size="lg" asChild className="bg-whatsapp hover:bg-whatsapp/90 text-white px-8 py-3 h-auto rounded-md shadow-lg hover:shadow-xl transition-all duration-300 text-base font-semibold">
-            <a href="https://wa.me/573015813455" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/573205971329" target="_blank" rel="noopener noreferrer">
               <img src={whatsappLogoWhite} alt="WhatsApp" className="mr-2 h-6 w-6" />
               Consultar por WhatsApp
             </a>
