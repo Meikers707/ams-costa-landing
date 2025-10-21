@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileText } from "lucide-react";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
 // Productos Espumados
@@ -283,15 +284,21 @@ const ProductCatalog = () => {
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
           Nuestros Productos
         </h2>
-        <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
+        <div className="w-24 h-1 bg-primary mx-auto mb-12"></div>
         
-        {/* Sección Espumado */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
-            Productos Espumados
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {espumadoProducts.map((product, index) => (
+        <Tabs defaultValue="espumado" className="w-full">
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 h-12">
+            <TabsTrigger value="espumado" className="text-base font-semibold">
+              Espumado
+            </TabsTrigger>
+            <TabsTrigger value="carton" className="text-base font-semibold">
+              Cartón
+            </TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="espumado" className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+              {espumadoProducts.map((product, index) => (
               <a
                 key={index}
                 href={getWhatsAppUrl(product)}
@@ -355,17 +362,13 @@ const ProductCatalog = () => {
                   </CardContent>
                 </Card>
               </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Sección Cartón */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
-            Productos de Cartón
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-            {cartonProducts.map((product, index) => (
+              ))}
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="carton" className="mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+              {cartonProducts.map((product, index) => (
               <a
                 key={index}
                 href={getWhatsAppUrl(product)}
@@ -429,9 +432,10 @@ const ProductCatalog = () => {
                   </CardContent>
                 </Card>
               </a>
-            ))}
-          </div>
-        </div>
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
         
         <div className="flex justify-center mt-16 animate-fade-in" style={{ animationDelay: '400ms' }}>
           <a
