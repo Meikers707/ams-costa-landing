@@ -78,13 +78,13 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://wa.me/573005994913"
+                  href="https://wa.me/573205971329"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  +57 300 599 4913
+                  +57 320 597 1329
                 </a>
               </li>
               <li>
