@@ -90,7 +90,9 @@ const ProductCarousel = () => {
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <Card className="overflow-hidden hover-lift border-2 border-border hover:border-primary transition-all duration-300 h-full flex flex-col">
                   <CardContent className="p-6 flex flex-col flex-1">
-                    <div className="aspect-square mb-4 flex items-center justify-center bg-blue-100 rounded-lg overflow-hidden">
+                    <div className="aspect-square mb-4 flex items-center justify-center bg-blue-100 rounded-lg overflow-hidden"
+                    style={{backgroundColor: "#fbdea8ff"}}
+                    >
                       <img
                         src={product.image}
                         alt={product.name}
