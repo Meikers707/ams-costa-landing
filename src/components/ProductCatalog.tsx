@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText } from "lucide-react";
 import whatsappLogoWhite from "@/assets/whatsapp-logo-white.svg";
+// Productos Espumados
 import portacomidaC1 from "@/assets/products/portacomida-c1.png";
 import portacomidaJ1 from "@/assets/products/portacomida-j1.png";
 import portacomidaJ1Negro from "@/assets/products/portacomida-j1-negro.png";
@@ -12,11 +13,22 @@ import vasoPlasticoWau from "@/assets/products/vaso-plastico-wau.png";
 import bandejaEspumada from "@/assets/products/bandeja-espumada.png";
 import bowlBamboo from "@/assets/products/bowl-bamboo.png";
 import contenedorDobleUso from "@/assets/products/contenedor-doble-uso.png";
+// Cubiertos
 import cucharaSopera from "@/assets/products/cuchara-sopera.png";
 import cuchillo from "@/assets/products/cuchillo.png";
+import tenedor from "@/assets/products/tenedor.png";
+// Tapas
 import tapaCristal from "@/assets/products/tapa-cristal.png";
 import tapaSalsero from "@/assets/products/tapa-salsero.png";
-import tenedor from "@/assets/products/tenedor.png";
+// Productos de Cartón
+import vaso4Onzas from "@/assets/products/vaso-4onzas.png";
+import vaso7Onzas from "@/assets/products/vaso-7onzas.png";
+import portacomidaP3Espumado from "@/assets/products/portacomida-p3-espumado.png";
+import portacomidaJ2Espumado from "@/assets/products/portacomida-j2-espumado.png";
+import portacomidaC1Espumado from "@/assets/products/portacomida-c1-espumado.png";
+import plato15 from "@/assets/products/plato-15.png";
+import plato23 from "@/assets/products/plato-23.png";
+import cajaC3 from "@/assets/products/caja-c3.png";
 
 interface Product {
   name: string;
@@ -28,10 +40,10 @@ interface Product {
   image?: string;
 }
 
-const products: Product[] = [
+const espumadoProducts: Product[] = [
   {
     name: "Portacomida P3",
-    category: "Desechables",
+    category: "Espumado",
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "P3",
@@ -40,7 +52,7 @@ const products: Product[] = [
   },
   {
     name: "Portacomida C1",
-    category: "Desechables",
+    category: "Espumado",
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "C1",
@@ -49,7 +61,7 @@ const products: Product[] = [
   },
   {
     name: "Portacomida J1",
-    category: "Desechables",
+    category: "Espumado",
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "J1 Blanco",
@@ -58,7 +70,7 @@ const products: Product[] = [
   },
   {
     name: "Portacomida J1 Negro",
-    category: "Desechables",
+    category: "Espumado",
     color: "Negro",
     colorHex: "#000000",
     reference: "J1 Negro",
@@ -67,7 +79,7 @@ const products: Product[] = [
   },
   {
     name: "Portacomida J2",
-    category: "Desechables",
+    category: "Espumado",
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "J2",
@@ -76,7 +88,7 @@ const products: Product[] = [
   },
   {
     name: "Bandeja Espumada",
-    category: "Desechables",
+    category: "Espumado",
     color: "Negro",
     colorHex: "#000000",
     reference: "BE-1.3",
@@ -85,7 +97,7 @@ const products: Product[] = [
   },
   {
     name: "Bowl Bamboo Natural",
-    category: "Desechables",
+    category: "Espumado",
     color: "Natural",
     colorHex: "#D4A574",
     reference: "BB-Natural",
@@ -94,7 +106,7 @@ const products: Product[] = [
   },
   {
     name: "Vaso Espumado 16oz",
-    category: "Desechables",
+    category: "Espumado",
     color: "Blanco",
     colorHex: "#FFFFFF",
     reference: "16oz",
@@ -103,7 +115,7 @@ const products: Product[] = [
   },
   {
     name: "Vaso Plástico Tami",
-    category: "Desechables",
+    category: "Espumado",
     color: "Transparente",
     colorHex: "#FFFFFF",
     reference: "Tami",
@@ -112,7 +124,7 @@ const products: Product[] = [
   },
   {
     name: "Vaso Plástico Wau",
-    category: "Desechables",
+    category: "Espumado",
     color: "Transparente",
     colorHex: "#87CEEB",
     reference: "Wau",
@@ -121,7 +133,7 @@ const products: Product[] = [
   },
   {
     name: "Contenedor Doble Uso",
-    category: "Desechables",
+    category: "Espumado",
     color: "Negro",
     colorHex: "#000000",
     reference: "CDU-Negro",
@@ -130,7 +142,7 @@ const products: Product[] = [
   },
   {
     name: "Tapa Cristal",
-    category: "Desechables",
+    category: "Accesorios",
     color: "Transparente",
     colorHex: "#FFFFFF",
     reference: "TC",
@@ -139,7 +151,7 @@ const products: Product[] = [
   },
   {
     name: "Tapa Salsero",
-    category: "Desechables",
+    category: "Accesorios",
     color: "Transparente",
     colorHex: "#FFFFFF",
     reference: "TS",
@@ -175,13 +187,86 @@ const products: Product[] = [
   },
 ];
 
+const cartonProducts: Product[] = [
+  {
+    name: "Vaso Espumado 4 oz",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "4oz",
+    info: "Diámetro: 6,6 cm | Fondo: 4,5 cm | Peso: 1,6 g",
+    image: vaso4Onzas,
+  },
+  {
+    name: "Vaso Espumado 7 oz",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "7oz",
+    info: "Ideal para bebidas calientes y frías",
+    image: vaso7Onzas,
+  },
+  {
+    name: "Portacomida P3 Cartón",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "P3-Cartón",
+    info: "Alto: 7,5 cm | 20x21 cm | Peso: 40,7 g | 3 compartimentos",
+    image: portacomidaP3Espumado,
+  },
+  {
+    name: "Portacomida J2 Cartón",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "J2-Cartón",
+    info: "Alto: 6 cm | 16,5x24 cm | Peso: 31,2 g | 2 compartimentos",
+    image: portacomidaJ2Espumado,
+  },
+  {
+    name: "Portacomida C1 Cartón",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "C1-Cartón",
+    info: "Alto: 7,5 cm | 14,5x15 cm | Peso: 19,5 g",
+    image: portacomidaC1Espumado,
+  },
+  {
+    name: "Plato de Cartón #15",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "#15",
+    info: "Diámetro: 15 cm | Peso: 8 g | Ecológico",
+    image: plato15,
+  },
+  {
+    name: "Plato de Cartón #23",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "#23",
+    info: "Diámetro: 23 cm | Peso: 22 g | Resistente",
+    image: plato23,
+  },
+  {
+    name: "Caja Rectangular C3",
+    category: "Cartón",
+    color: "Blanco",
+    colorHex: "#FFFFFF",
+    reference: "C3",
+    info: "Alto: 4,5 cm | 18,5x13,2 cm | Peso: 35,8 g",
+    image: cajaC3,
+  },
+];
+
 const categoryColors: Record<string, string> = {
-  'Desechables': 'bg-primary/10 text-primary border-primary/20',
+  'Espumado': 'bg-blue-100 text-blue-700 border-blue-200',
+  'Cartón': 'bg-green-100 text-green-700 border-green-200',
   'Cubiertos': 'bg-accent/10 text-foreground border-accent/20',
-  'Bolsas': 'bg-secondary/10 text-white border-secondary/20',
-  'Insumos de Aseo': 'bg-purple-100 text-purple-700 border-purple-200',
-  'Alimentos': 'bg-orange-100 text-orange-700 border-orange-200',
-  'Bebidas': 'bg-cyan-100 text-cyan-700 border-cyan-200',
+  'Accesorios': 'bg-purple-100 text-purple-700 border-purple-200',
 };
 
 const ProductCatalog = () => {
@@ -196,76 +281,156 @@ const ProductCatalog = () => {
     <section id="products" className="py-20 bg-accent">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground tracking-tight">
-          Nuestros Productos Destacados
+          Nuestros Productos
         </h2>
         <div className="w-24 h-1 bg-primary mx-auto mb-16"></div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {products.map((product, index) => (
-            <a
-              key={index}
-              href={getWhatsAppUrl(product)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl"
-              aria-label={`Consultar disponibilidad de ${product.name}`}
-            >
-              <Card 
-                className="group cursor-pointer border-2 border-border bg-card rounded-xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/30 animate-fade-in h-full"
-                style={{ animationDelay: `${index * 80}ms` }}
+        {/* Sección Espumado */}
+        <div className="mb-20">
+          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
+            Productos Espumados
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {espumadoProducts.map((product, index) => (
+              <a
+                key={index}
+                href={getWhatsAppUrl(product)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl"
+                aria-label={`Consultar disponibilidad de ${product.name}`}
               >
-                {/* Visual Area with aspect ratio */}
-                <div className="relative aspect-[4/3] bg-gradient-to-br from-muted to-muted/50">
-                  {/* Category Badge */}
-                  <span className={`absolute top-3 right-3 z-10 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm ${categoryColors[product.category] || 'bg-muted/50 text-foreground border-border'}`}>
-                    {product.category}
-                  </span>
-                  
-                  {/* Product Image or Color Circle */}
-                  <div className="absolute inset-0 flex items-center justify-center p-6">
-                    {product.image ? (
-                      <img 
-                        src={product.image} 
-                        alt={product.name}
-                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
-                      />
-                    ) : (
-                      <div 
-                        className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
-                        style={{ backgroundColor: product.colorHex }}
-                      />
-                    )}
-                  </div>
-                </div>
-                
-                {/* Content Area */}
-                <CardContent className="p-4 sm:p-5 flex flex-col min-h-[220px]">
-                  {/* Product Header */}
-                  <div className="mb-3">
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 line-clamp-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground font-normal">
-                      Ref: {product.reference}
-                    </p>
-                  </div>
-                  
-                  {/* Product Description */}
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2 flex-grow">
-                    {product.info}
-                  </p>
-                  
-                  {/* CTA Button */}
-                  <div className="mt-auto">
-                    <div className="w-full px-4 py-2.5 rounded-lg bg-whatsapp text-white font-semibold text-sm transition-colors duration-200 group-hover:bg-whatsapp/90 flex items-center justify-center gap-2">
-                      <img src={whatsappLogoWhite} alt="WhatsApp" className="h-4 w-4" />
-                      Consultar disponibilidad
+                <Card 
+                  className="group cursor-pointer border-2 border-border bg-card rounded-xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/30 animate-fade-in h-full"
+                  style={{ animationDelay: `${index * 80}ms` }}
+                >
+                  {/* Visual Area with aspect ratio */}
+                  <div className="relative aspect-[4/3] bg-blue-100">
+                    {/* Category Badge */}
+                    <span className={`absolute top-3 right-3 z-10 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm ${categoryColors[product.category] || 'bg-muted/50 text-foreground border-border'}`}>
+                      {product.category}
+                    </span>
+                    
+                    {/* Product Image or Color Circle */}
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                      {product.image ? (
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div 
+                          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
+                          style={{ backgroundColor: product.colorHex }}
+                        />
+                      )}
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </a>
-          ))}
+                  
+                  {/* Content Area */}
+                  <CardContent className="p-4 sm:p-5 flex flex-col min-h-[220px]">
+                    {/* Product Header */}
+                    <div className="mb-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-normal">
+                        Ref: {product.reference}
+                      </p>
+                    </div>
+                    
+                    {/* Product Description */}
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2 flex-grow">
+                      {product.info}
+                    </p>
+                    
+                    {/* CTA Button */}
+                    <div className="mt-auto">
+                      <div className="w-full px-4 py-2.5 rounded-lg bg-whatsapp text-white font-semibold text-sm transition-colors duration-200 group-hover:bg-whatsapp/90 flex items-center justify-center gap-2">
+                        <img src={whatsappLogoWhite} alt="WhatsApp" className="h-4 w-4" />
+                        Consultar disponibilidad
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Sección Cartón */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
+            Productos de Cartón
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            {cartonProducts.map((product, index) => (
+              <a
+                key={index}
+                href={getWhatsAppUrl(product)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-xl"
+                aria-label={`Consultar disponibilidad de ${product.name}`}
+              >
+                <Card 
+                  className="group cursor-pointer border-2 border-border bg-card rounded-xl overflow-hidden transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-primary/30 animate-fade-in h-full"
+                  style={{ animationDelay: `${index * 80}ms` }}
+                >
+                  {/* Visual Area with aspect ratio */}
+                  <div className="relative aspect-[4/3] bg-green-100">
+                    {/* Category Badge */}
+                    <span className={`absolute top-3 right-3 z-10 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider border backdrop-blur-sm ${categoryColors[product.category] || 'bg-muted/50 text-foreground border-border'}`}>
+                      {product.category}
+                    </span>
+                    
+                    {/* Product Image or Color Circle */}
+                    <div className="absolute inset-0 flex items-center justify-center p-6">
+                      {product.image ? (
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                        />
+                      ) : (
+                        <div 
+                          className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-lg transition-transform duration-300 group-hover:scale-110"
+                          style={{ backgroundColor: product.colorHex }}
+                        />
+                      )}
+                    </div>
+                  </div>
+                  
+                  {/* Content Area */}
+                  <CardContent className="p-4 sm:p-5 flex flex-col min-h-[220px]">
+                    {/* Product Header */}
+                    <div className="mb-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1 line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-normal">
+                        Ref: {product.reference}
+                      </p>
+                    </div>
+                    
+                    {/* Product Description */}
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2 flex-grow">
+                      {product.info}
+                    </p>
+                    
+                    {/* CTA Button */}
+                    <div className="mt-auto">
+                      <div className="w-full px-4 py-2.5 rounded-lg bg-whatsapp text-white font-semibold text-sm transition-colors duration-200 group-hover:bg-whatsapp/90 flex items-center justify-center gap-2">
+                        <img src={whatsappLogoWhite} alt="WhatsApp" className="h-4 w-4" />
+                        Consultar disponibilidad
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
         </div>
         
         <div className="flex justify-center mt-16 animate-fade-in" style={{ animationDelay: '400ms' }}>
