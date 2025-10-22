@@ -70,10 +70,6 @@ const AboutUs = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-muted-foreground mb-1">Dirección</p>
-                    <p className="font-semibold text-foreground">Calle 39 No. 23b - 26, Barrio Montes</p>
-                  </div>
                   
                   <div>
                     <p className="text-sm text-muted-foreground mb-1">Ciudad</p>
