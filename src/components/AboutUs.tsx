@@ -92,7 +92,6 @@ const AboutUs = () => {
                 </div>
                 
                 <div className="mt-8 aspect-video rounded-lg overflow-hidden bg-muted">
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125334.93042141123!2d-74.90037753839036!3d10.984752542455453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d44d12ae605%3A0x2633844581b917b2!2sBarranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses!2sco!4v1761161244670!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
               </CardContent>
             </Card>
