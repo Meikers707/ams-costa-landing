@@ -112,7 +112,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5 text-secondary" />
               </a>
               <a
-                href="https://www.facebook.com/distribucionesamsdelacosta"
+                href="https://www.facebook.com/share/1BgdGPhNd2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary rounded-full flex items-center justify-center hover:bg-primary/80 transition-colors"
