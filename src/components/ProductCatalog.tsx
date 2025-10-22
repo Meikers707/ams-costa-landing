@@ -440,7 +440,7 @@ const ProductCatalog = () => {
         
         <div className="flex justify-center mt-16 animate-fade-in" style={{ animationDelay: '400ms' }}>
           <a
-            href="https://drive.google.com/file/d/1LCUo_2o65hI-BUk_TSJvDnyGd8K_ySzG/view?usp=sharing"
+            href="https://drive.google.com/drive/folders/1V4x1rsDpO3P178Ucjeghn2c0GaIDX-Re?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-secondary px-10 py-5 rounded-xl font-bold text-xl shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-110 hover:-translate-y-1 overflow-hidden"
