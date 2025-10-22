@@ -77,13 +77,6 @@ const AboutUs = () => {
                   </div>
                   
                   <div className="pt-4">
-                    <Button
-                      onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Calle+39+No.+23b+-+26,+Barrio+Montes,+Barranquilla', '_blank')}
-                      className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-                    >
-                      <MapPin className="mr-2 h-4 w-4" />
-                      Cómo llegar
-                    </Button>
                   </div>
                 </div>
                 
